@@ -11,7 +11,11 @@ import UIKit
 class BookWARMCollectionViewController: UICollectionViewController {
 
     
-    let movie = MovieInfo()
+    var movie = MovieInfo() {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,9 +76,14 @@ class BookWARMCollectionViewController: UICollectionViewController {
         
         cell.configureCell(row: row)
         
-        
+        cell.likeButton.tag = indexPath.row
+        cell.likeButton.addTarget(self, action: #selector(likeButtonClicked), for: .touchUpInside)
         
         return cell
+    }
+    
+    @objc func likeButtonClicked(_ sender: UIButton) {
+        movie.list[sender.tag].like.toggle()
     }
 
     

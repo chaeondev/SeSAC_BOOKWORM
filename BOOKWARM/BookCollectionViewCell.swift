@@ -12,7 +12,7 @@ class BookCollectionViewCell: UICollectionViewCell {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var rateLabel: UILabel!
     @IBOutlet var posterImageView: UIImageView!
-    
+    @IBOutlet var likeButton: UIButton!
     
     func configureCell(row: Movie) {
         nameLabel.text = row.title
@@ -30,6 +30,12 @@ class BookCollectionViewCell: UICollectionViewCell {
         //rateLabel
         rateLabel.textColor = .white
         rateLabel.font = .systemFont(ofSize: 15)
+        
+        //likeButton
+        likeButton.tintColor = .white
+        
+        let like = row.like ? UIImage(systemName: "heart.fill") : UIImage(systemName: "heart")
+        likeButton.setImage(like, for: .normal)
         
         //cell
         
