@@ -58,7 +58,10 @@ class BookWARMCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-        vc.contents = movie.list[indexPath.row].title
+        
+        vc.movieData = movie.list[indexPath.item]
+
+        
         navigationController?.pushViewController(vc, animated: true)
         
         
