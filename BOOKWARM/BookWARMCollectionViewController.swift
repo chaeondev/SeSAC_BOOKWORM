@@ -17,13 +17,22 @@ class BookWARMCollectionViewController: UICollectionViewController {
         }
     }
     
+//    let list = ["iOS", "iPad", "Android", "Apple", "Watch", "사과", "사자", "호랑이"]
+//    var searchList: [String] = []
+//
+//    let searchBar = UISearchBar()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        searchBar.delegate = self
         
         let nib = UINib(nibName: "BookCollectionViewCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: "BookCollectionViewCell")
 
         setCollectionViewLayout()
+        
+//        navigationItem.titleView = searchBar
     }
     
     func setCollectionViewLayout() {
@@ -89,6 +98,39 @@ class BookWARMCollectionViewController: UICollectionViewController {
         movie.list[sender.tag].like.toggle()
     }
 
-    
 
+    
 }
+
+//extension BookWARMCollectionViewController: UISearchBarDelegate {
+//
+//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+//        searchList.removeAll()
+//
+//        for item in list {
+//            if item.contains(searchBar.text!) {
+//                searchList.append(item)
+//            }
+//        }
+//        collectionView.reloadData()
+//    }
+//
+//
+//    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+//        searchList.removeAll()
+//        searchBar.text = ""
+//        collectionView.reloadData()
+//    }
+//
+//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//        searchList.removeAll()
+//
+//        for item in list {
+//            if item.contains(searchBar.text!) {
+//                searchList.append(item)
+//            }
+//        }
+//        collectionView.reloadData()
+//
+//    }
+//}
