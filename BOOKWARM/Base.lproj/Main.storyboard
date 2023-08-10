@@ -158,6 +158,7 @@
         <!--Detail View Controller-->
         <scene sceneID="p9L-bM-Qoc">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zXh-7n-oe8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="DetailViewController" id="UNb-Eq-Q22" customClass="DetailViewController" customModule="BOOKWARM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Np4-p3-cQo">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -211,7 +212,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3My-AL-KDr">
-                                <rect key="frame" x="0.0" y="298.33333333333331" width="393" height="519.66666666666674"/>
+                                <rect key="frame" x="0.0" y="298.33333333333326" width="393" height="519.66666666666674"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="줄거리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVK-Nt-miP">
                                         <rect key="frame" x="24" y="8" width="59" height="26"/>
@@ -260,7 +261,6 @@
                         <outlet property="titleLabel" destination="Ays-7V-yaj" id="M85-YV-8wm"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zXh-7n-oe8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4450" y="13"/>
         </scene>
@@ -289,6 +289,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="GhT-Ao-0DE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GD8-Zf-UCc">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
